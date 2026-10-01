@@ -1,48 +1,91 @@
-# 🖼️ CIFAR-10 Image Classification
+# Image Classification with Deep Learning
 
-A beginner deep learning project exploring image classification using Python and TensorFlow with the CIFAR-10 dataset.
+## Project Overview
 
-## 📌 Project Overview
+This project implements an image classification model using a
+Convolutional Neural Network (CNN).
 
-This project introduces the fundamentals of image classification and working with image datasets using TensorFlow.
+The model is trained on the CIFAR-10 dataset, which contains images
+from 10 different classes:
 
-The current implementation loads the CIFAR-10 dataset and explores the structure of the training and testing data as a foundation for building an image classification model.
+- Airplane
+- Automobile
+- Bird
+- Cat
+- Deer
+- Dog
+- Frog
+- Horse
+- Ship
+- Truck
 
-## 🎯 Goals
+The project demonstrates the complete deep learning workflow,
+including data preprocessing, CNN construction, model training,
+evaluation, performance visualization, and predictions on test images.
 
-- Understand the fundamentals of image classification
-- Work with image datasets in TensorFlow
-- Explore training and testing data
-- Build a foundation for neural-network-based image classification
-
-## 🛠 Technologies Used
+## Technologies Used
 
 - Python
 - TensorFlow
 - Keras
-- Jupyter Notebook
+- NumPy
+- Matplotlib
+- Google Colab
 
-## 📊 Dataset
+## Dataset
 
-The project uses the CIFAR-10 dataset available through TensorFlow/Keras.
+The CIFAR-10 dataset is used for training and testing the model.
 
-The dataset contains labeled images divided into training and testing sets.
+It contains 60,000 color images divided into 10 classes:
 
-## 🔍 Current Implementation
+- 50,000 training images
+- 10,000 testing images
+- Image size: 32 × 32 pixels
 
-The notebook currently:
+## Model Architecture
 
-- Imports TensorFlow and Keras datasets
-- Loads the CIFAR-10 dataset
-- Separates training and testing images and labels
-- Examines the dimensions of the datasets
+The CNN includes:
 
-## 🚀 Future Improvements
+- Convolutional layers for feature extraction
+- Max-pooling layers for dimensionality reduction
+- Flatten layer
+- Dense neural network layers
+- Softmax output layer for classification
 
-- Normalize image pixel values
-- Visualize sample images and their labels
-- Build a neural network classifier
-- Implement a Convolutional Neural Network (CNN)
-- Train and evaluate the model
-- Measure classification accuracy
-- Visualize training and validation performance
+## Training
+
+The model is trained using:
+
+- Adam optimizer
+- Sparse categorical cross-entropy loss
+- Accuracy as the evaluation metric
+
+Training and validation accuracy and loss are visualized to monitor
+the learning process.
+
+## Results
+
+The trained CNN achieved approximately **69% test accuracy**.
+
+The project also visualizes predictions on test images and compares
+the predicted class with the actual class.
+
+## Example Applications
+
+Image classification can be used in many areas, including:
+
+- Medical imaging
+- Autonomous vehicles
+- Security systems
+- Object recognition
+- Industrial inspection
+
+## Future Improvements
+
+Possible improvements include:
+
+- Training for more epochs
+- Data augmentation
+- Adding dropout
+- Using a deeper CNN architecture
+- Applying transfer learning with pretrained models
