@@ -1,12 +1,12 @@
-# Image Classification with Deep Learning
+# Image Classification with Deep Learning 🧠
 
 ## Project Overview
 
 This project implements an image classification model using a
-Convolutional Neural Network (CNN).
+Convolutional Neural Network (CNN) trained on the CIFAR-10 dataset.
 
-The model is trained on the CIFAR-10 dataset, which contains images
-from 10 different classes:
+The model learns visual features from images and classifies them into
+10 different categories:
 
 - Airplane
 - Automobile
@@ -19,73 +19,60 @@ from 10 different classes:
 - Ship
 - Truck
 
-The project demonstrates the complete deep learning workflow,
-including data preprocessing, CNN construction, model training,
-evaluation, performance visualization, and predictions on test images.
-
 ## Technologies Used
 
 - Python
-- TensorFlow
-- Keras
+- TensorFlow / Keras
 - NumPy
 - Matplotlib
 - Google Colab
 
 ## Dataset
 
-The CIFAR-10 dataset is used for training and testing the model.
-
-It contains 60,000 color images divided into 10 classes:
+The project uses the CIFAR-10 dataset, containing 60,000 color images
+across 10 classes.
 
 - 50,000 training images
-- 10,000 testing images
+- 10,000 test images
 - Image size: 32 × 32 pixels
 
-## Model Architecture
+## CNN Architecture
 
-The CNN includes:
+The neural network uses:
 
 - Convolutional layers for feature extraction
 - Max-pooling layers for dimensionality reduction
 - Flatten layer
-- Dense neural network layers
-- Softmax output layer for classification
+- Dense layers
+- Softmax output layer for 10-class classification
 
-## Training
+## Model Training & Evaluation
 
-The model is trained using:
+The model was trained using the Adam optimizer and sparse categorical
+cross-entropy loss.
 
-- Adam optimizer
-- Sparse categorical cross-entropy loss
-- Accuracy as the evaluation metric
+Training and validation accuracy and loss were monitored throughout
+training.
 
-Training and validation accuracy and loss are visualized to monitor
-the learning process.
+### Final Result
 
-## Results
+**Test Accuracy: approximately 69%**
 
-The trained CNN achieved approximately **69% test accuracy**.
-
-The project also visualizes predictions on test images and compares
-the predicted class with the actual class.
-
-## Example Applications
-
-Image classification can be used in many areas, including:
-
-- Medical imaging
-- Autonomous vehicles
-- Security systems
-- Object recognition
-- Industrial inspection
+The trained model was also tested on unseen images, with predicted
+classes compared against their actual labels.
 
 ## Future Improvements
 
-Possible improvements include:
+The model could be improved by:
 
-- Training for more epochs
 - Data augmentation
-- Adding dropout
-- Using a deeper CNN architecture
-- Applying transfer learning with pretrained models
+- Dropout regularization
+- Additional convolutional layers
+- Training for more epochs
+- Transfer learning
+
+## Purpose
+
+This project demonstrates the fundamentals of deep learning for
+computer vision, including dataset preprocessing, CNN development,
+training, evaluation, and image prediction.
